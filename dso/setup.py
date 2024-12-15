@@ -15,7 +15,7 @@ required = [
     "tensorflow==1.14",
     "numba==0.53.1",
     "sympy",
-    "pandas",
+    "pandas==0.22",
     "scikit-learn",
     "click",
     "deap",
@@ -41,11 +41,14 @@ extras['all'] = list(set([item for group in extras.values() for item in group]))
 
 setup(
     name='dso',
-    version='1.0.dev',
+    version='1.0.dev0',  # 规范化版本号
     description='Deep symbolic optimization.',
     author='LLNL',
-    packages=find_packages(),  # 使用 find_packages() 自动发现所有包和子包
-    ext_modules=cythonize([os.path.join('dso', 'cyfunc.pyx')]),
+    packages=find_packages(),  # 自动发现所有包和子包
+    ext_modules=cythonize(
+        [os.path.join('dso', 'cyfunc.pyx')],
+        compiler_directives={'language_level': 3}  # 设置Cython语言级别
+    ),
     include_dirs=[np.get_include()],
     install_requires=required,
     extras_require=extras,
