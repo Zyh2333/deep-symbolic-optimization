@@ -14,6 +14,7 @@ from datetime import datetime
 import numpy as np
 import tensorflow as tf
 import commentjson as json
+import time as tt
 
 from dso.task import set_task
 from dso.train import Trainer
@@ -81,7 +82,7 @@ class DeepSymbolicOptimizer():
         self.trainer = self.make_trainer()
         self.checkpoint = self.make_checkpoint()
 
-    def train_one_step(self, override=None):
+    def train_one_step(self, start, override=None):
         """
         Train one iteration.
         """
@@ -99,23 +100,29 @@ class DeepSymbolicOptimizer():
 
         # If complete, return summary
         if self.trainer.done:
-            return self.finish()
+            return self.finish(start)
 
-    def train(self):
+    def train(self, start):
         """
         Train the model until completion.
         """
 
         # Setup the model
         self.setup()
+        turn = 1
 
         # Train the model until done
-        while not self.trainer.done:
-            result = self.train_one_step()
+        while not self.trainer.done and turn <= 1000:
+            result = self.train_one_step(start)
+            turn += 1
 
+        if turn > 1000:
+            result['success'] = 0
+            with open('log/result.log', mode='a') as rf:
+                print(f"{self.config['task']['dataset'].split('/')[8][:-4]} 0 0 {tt.time() - start} 0\n", file=rf)
         return result
 
-    def finish(self):
+    def finish(self, start):
         """
         After training completes, finish up and return summary dict.
         """
@@ -130,6 +137,8 @@ class DeepSymbolicOptimizer():
             "traversal" : repr(p),
             "program" : p
         })
+        with open('log/result.log', mode='a') as rf:
+            print(f"{self.config['task']['dataset'].split('/')[8][:-4]} {repr(p.sympy_expr)} {'1' if repr(p.sympy_expr) == 'x1 + x2' else 0} {tt.time() - start} {repr(p)}\n", file=rf)
 
         # Save all results available only after all iterations are finished. Also return metrics to be added to the summary file
         results_add = self.logger.save_results(self.pool, self.trainer.nevals)

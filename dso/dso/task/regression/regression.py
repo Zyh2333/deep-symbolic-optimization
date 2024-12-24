@@ -8,6 +8,18 @@ from dso.task.regression.dataset import BenchmarkDataset
 from dso.task.regression.polyfit import PolyOptimizer, make_poly_data
 
 
+def abs_function(y, y_hat):
+    # 打印第一个元素用于调试
+    #     print(f"Debug: y[0] = {y[0]}, y_hat[0] = {y_hat[0]}")
+    loss = 0
+    # print('y', y)
+    # print('y', len(y))
+    # print('y_hat', y_hat)
+    # print('y_hat', len(y_hat))
+    for i in range(len(y)):
+        loss += abs((int(y[i]) - int(y_hat[i])))
+    return loss
+
 class RegressionTask(HierarchicalTask):
     """
     Class for the symbolic regression task. Discrete objects are expressions,
@@ -22,7 +34,7 @@ class RegressionTask(HierarchicalTask):
                  reward_noise_type="r", threshold=1e-12,
                  normalize_variance=False, protected=False,
                  decision_tree_threshold_set=None,
-                 poly_optimizer_params=None):
+                 poly_optimizer_params=None, limited=0):
         """
         Parameters
         ----------
@@ -108,9 +120,14 @@ class RegressionTask(HierarchicalTask):
         # Case 3: Dataset filename
         elif isinstance(dataset, str) and dataset.endswith("csv"):
             df = pd.read_csv(dataset, header=None) # Assuming data file does not have header rows
+            df_test = pd.read_csv(dataset[:-4]+"_test.csv", header=None) # Assuming data file does not have header rows
+            columns = df.columns
             self.X_train = df.values[:, :-1]
             self.y_train = df.values[:, -1]
             self.name = dataset.replace("/", "_")[:-4]
+            self.X_test = df_test.values[:, :-1]
+            self.y_test = df_test.values[:, -1]
+            self.y_test_noiseless = self.y_test
 
         # Case 4: sklearn-like (X, y) data
         elif isinstance(dataset, tuple):
@@ -125,8 +142,9 @@ class RegressionTask(HierarchicalTask):
             self.y_test_noiseless = self.y_test
 
         # Save time by only computing data variances once
-        self.var_y_test = np.var(self.y_test)
-        self.var_y_test_noiseless = np.var(self.y_test_noiseless)
+        # self.var_y_test = np.var(self.y_test)
+        self.var_y_test = self.y_test
+        self.var_y_test_noiseless = self.y_test_noiseless
 
         """
         Configure train/test reward metrics.
@@ -193,6 +211,7 @@ class RegressionTask(HierarchicalTask):
             else:
                 p.traversal[p.poly_pos] = self.poly_optimizer.fit(self.X_train, poly_data_y)
 
+        # print('X_train', self.X_train)
         # Compute estimated values
         y_hat = p.execute(self.X_train)
 
@@ -213,8 +232,19 @@ class RegressionTask(HierarchicalTask):
         if optimizing:
             return self.const_opt_metric(self.y_train, y_hat)
 
+        if p.pretty() == 'x₁ + x₂':
+            print('pp111', self.y_train[0], y_hat[0])
+            print('pp555', self.y_train, y_hat)
+            # print('pp222', np.abs(self.y_train[0] - y_hat[0]))
+            print('pp333', abs_function(self.y_train, y_hat))
         # Compute metric
         r = self.metric(self.y_train, y_hat)
+        import dso.utils as U
+        # print('test', U.pretty("add(x2,x1)"))
+        # import dso.utils as U
+        # if p.travelsal == U.pretty("add(x2,x1)"):
+        #     print('rrr', r)
+        #     print('self.metric', self.metric)
 
         # Direct reward noise
         # For reward_noise_type == "r", success can for ~max_reward metrics be
@@ -240,17 +270,19 @@ class RegressionTask(HierarchicalTask):
 
         else:
             # NMSE on test data (used to report final error)
-            nmse_test = np.mean((self.y_test - y_hat) ** 2) / self.var_y_test
+            # nmse_test = np.mean((self.y_test - y_hat) ** 2) / self.var_y_test
+            nmse_test = abs_function(self.y_test, y_hat)
 
             # NMSE on noiseless test data (used to determine recovery)
-            nmse_test_noiseless = np.mean((self.y_test_noiseless - y_hat) ** 2) / self.var_y_test_noiseless
+            # nmse_test_noiseless = np.mean((self.y_test_noiseless - y_hat) ** 2) / self.var_y_test_noiseless
+            nmse_test_noiseless = abs_function(self.y_test_noiseless, y_hat)
 
             # Success is defined by NMSE on noiseless test data below a threshold
             success = nmse_test_noiseless < self.threshold
 
         info = {
-            "nmse_test" : nmse_test,
-            "nmse_test_noiseless" : nmse_test_noiseless,
+            "absolute_test" : nmse_test,
+            "absolute_test_noiseless" : nmse_test_noiseless,
             "success" : success
         }
 
@@ -298,7 +330,21 @@ def make_regression_metric(name, y_train, *args):
         Maximum possible reward under this metric.
     """
 
-    var_y = np.var(y_train)
+    # var_y = np.var(y_train)
+
+    def loss_function(y, y_hat):
+    # 打印第一个元素用于调试
+    #     print(f"Debug: y[0] = {y[0]}, y_hat[0] = {y_hat[0]}")
+        loss = 0
+        # print('y', y)
+        # print('y', len(y))
+        # print('y_hat', y_hat)
+        # print('y_hat', len(y_hat))
+        for i in range(len(y)):
+            loss += abs((int(y[i]) - int(y_hat[i])))
+        return 1 / (1 + loss)
+        # 计算损失
+        # loss = 1 / (1 + np.sum(np.abs(y - y_hat)))
 
     all_metrics = {
 
@@ -350,6 +396,9 @@ def make_regression_metric(name, y_train, *args):
         "inv_nrmse" :    (lambda y, y_hat : 1/(1 + args[0]*np.sqrt(np.mean((y - y_hat)**2)/var_y)),
                         1),
 
+        # "absolute" : (lambda y, y_hat: 1/(1+np.sum(abs(y - y_hat))), 0),
+        "absolute" : (loss_function, 0),
+
         # Fraction of predicted points within p0*abs(y) + p1 band of the true value
         # Range: [0, 1]
         "fraction" :    (lambda y, y_hat : np.mean(abs(y - y_hat) < args[0]*abs(y) + args[1]),
@@ -366,28 +415,32 @@ def make_regression_metric(name, y_train, *args):
                         0)
     }
 
-    assert name in all_metrics, "Unrecognized reward function name."
-    assert len(args) == all_metrics[name][1], "For {}, expected {} reward function parameters; received {}.".format(name,all_metrics[name][1], len(args))
-    metric = all_metrics[name][0]
-
-    # For negative MSE-based rewards, invalid reward is the value of the reward function when y_hat = mean(y)
-    # For inverse MSE-based rewards, invalid reward is 0.0
-    # For non-MSE-based rewards, invalid reward is the minimum value of the reward function's range
+    # name = 'absolute'
+    # assert name in all_metrics, "Unrecognized reward function name."
+    # # print('args', args)
+    # # assert len(args) == all_metrics[name][1], "For {}, expected {} reward function parameters; received {}.".format(name,all_metrics[name][1], len(args))
+    # print('name', name)
+    # metric = all_metrics[name][0]
+    #
+    # # For negative MSE-based rewards, invalid reward is the value of the reward function when y_hat = mean(y)
+    # # For inverse MSE-based rewards, invalid reward is 0.0
+    # # For non-MSE-based rewards, invalid reward is the minimum value of the reward function's range
     all_invalid_rewards = {
-        "neg_mse" : -var_y,
-        "neg_rmse" : -np.sqrt(var_y),
+        # "neg_mse" : -var_y,
+        # "neg_rmse" : -np.sqrt(var_y),
         "neg_nmse" : -1.0,
         "neg_nrmse" : -1.0,
-        "neglog_mse" : -np.log(1 + var_y),
+        # "neglog_mse" : -np.log(1 + var_y),
         "inv_mse" : 0.0, #1/(1 + args[0]*var_y),
         "inv_nmse" : 0.0, #1/(1 + args[0]),
         "inv_nrmse" : 0.0, #1/(1 + args[0]),
         "fraction" : 0.0,
         "pearson" : 0.0,
-        "spearman" : 0.0
+        "spearman" : 0.0,
+        "absolute" : 0.0
     }
     invalid_reward = all_invalid_rewards[name]
-
+    #
     all_max_rewards = {
         "neg_mse" : 0.0,
         "neg_rmse" : 0.0,
@@ -399,8 +452,10 @@ def make_regression_metric(name, y_train, *args):
         "inv_nrmse" : 1.0,
         "fraction" : 1.0,
         "pearson" : 1.0,
-        "spearman" : 1.0
+        "spearman" : 1.0,
+        "absolute" : 1.0
     }
     max_reward = all_max_rewards[name]
+    metric = all_metrics[name][0]
 
     return metric, invalid_reward, max_reward

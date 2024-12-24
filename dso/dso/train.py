@@ -392,6 +392,7 @@ class Trainer():
         # Create the Batch
         sampled_batch = Batch(actions=actions, obs=obs, priors=priors,
                               lengths=lengths, rewards=r, on_policy=on_policy)
+        # print('sampled_batch', sampled_batch)
 
         # Update and sample from the priority queue
         if self.priority_queue is not None:

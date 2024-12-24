@@ -48,6 +48,7 @@ class Token():
     def __call__(self, *args):
         assert self.function is not None, \
             "Token {} is not callable.".format(self.name)
+        # print('token execute......')
 
         return self.function(*args)
 

@@ -30,7 +30,7 @@ def train_dso(config):
     # Train the model
     model = DeepSymbolicOptimizer(deepcopy(config))
     start = time.time()
-    result = model.train()
+    result = model.train(start)
     result["t"] = time.time() - start
     result.pop("program")
 
@@ -69,6 +69,8 @@ def print_summary(config, runs, messages):
 def main(config_template, runs, n_cores_task, seed, benchmark, exp_name):
     """Runs DSO in parallel across multiple seeds using multiprocessing."""
 
+    # config_template = "dso/dso/config/config_regression.json"
+    # benchmark = "Nguyen-7"
     messages = []
 
     # Load the experiment config
@@ -153,7 +155,14 @@ def main(config_template, runs, n_cores_task, seed, benchmark, exp_name):
 
     # Evaluate the log files
     print("\n== POST-PROCESS START =================")
-    log = LogEval(config_path=os.path.dirname(summary_path))
+    def get_nth_parent_directory(path, n):
+        for _ in range(n):
+            path = os.path.dirname(path)
+            # 如果路径已经是根目录或空，则停止
+            if path == '' or path == os.path.sep:
+                break
+        return path
+    log = LogEval(config_path=get_nth_parent_directory(summary_path, 1))
     log.analyze_log(
         show_count=config["postprocess"]["show_count"],
         show_hof=config["logging"]["hof"] is not None and config["logging"]["hof"] > 0,

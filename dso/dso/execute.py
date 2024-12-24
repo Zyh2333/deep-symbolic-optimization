@@ -29,10 +29,18 @@ def python_execute(traversal, X):
         apply_stack.append([node])
 
         while len(apply_stack[-1]) == apply_stack[-1][0].arity + 1:
+            # get symbol + - x /
             token = apply_stack[-1][0]
+            # print('token', token)
+            # print('token', token.name)
+            # get datas for calculate
             terminals = apply_stack[-1][1:]
+            # for node in terminals:
+
 
             if token.input_var is not None:
+                # if x1 x2
+                # print('token.input_var', token.input_var)
                 intermediate_result = X[:, token.input_var]
             else:
                 if isinstance(token, StateChecker):
@@ -41,10 +49,13 @@ def python_execute(traversal, X):
                     intermediate_result = token(X)
                 else:
                     intermediate_result = token(*terminals)
+                    # print('intermediate_result', intermediate_result)
+            # calculate low level add for high level's node
             if len(apply_stack) != 1:
                 apply_stack.pop()
                 apply_stack[-1].append(intermediate_result)
             else:
+                # final result
                 return intermediate_result
 
     assert False, "Function should never get here!"
@@ -68,10 +79,10 @@ def cython_execute(traversal, X):
     result : float
         The result of executing the traversal.
     """
-    if len(traversal) > 1:
-        is_input_var = array.array('i', [t.input_var is not None for t in traversal])
-        return cyfunc.execute(X, len(traversal), traversal, is_input_var)
-    else:
-        return python_execute(traversal, X)
+    # if len(traversal) > 1:
+    #     is_input_var = array.array('i', [t.input_var is not None for t in traversal])
+    #     return cyfunc.execute(X, len(traversal), traversal, is_input_var)
+    # else:
+    return python_execute(traversal, X)
 
 

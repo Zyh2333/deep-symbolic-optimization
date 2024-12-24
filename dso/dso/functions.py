@@ -33,36 +33,78 @@ def harmonic(x1):
         return GAMMA + np.log(x1) + 0.5/x1 - 1./(12*x1**2) + 1./(120*x1**4)
 
 
+def add(x1, x2):
+    # print('add x1', x1)
+    # print('add x2', x2)
+    added = []
+    for i in range(len(x1)):
+        added.append(int(x1[i]) + int(x2[i]))
+    return added
+
+
+def sub(x1, x2):
+    # print('sub x1', x1)
+    # print('sub x2', x2)
+    added = []
+    for i in range(len(x1)):
+        added.append(int(x1[i]) - int(x2[i]))
+    return added
+
+def mul(x1, x2):
+    # print('mul x1', x1)
+    # print('mul x2', x2)
+    added = []
+    for i in range(len(x1)):
+        added.append(int(x1[i]) * int(x2[i]))
+    return added
+
+
+def div(x1, x2):
+    # print('div x1', x1)
+    # print('div x2', x2)
+    added = []
+    for i in range(len(x1)):
+        if int(x2[i]) == 0:
+            added.append(0)
+        else:
+            added.append(int(x1[i]) // int(x2[i]))
+    return added
+
 # Annotate unprotected ops
 unprotected_ops = [
     # Binary operators
-    Token(np.add, "add", arity=2, complexity=1),
-    Token(np.subtract, "sub", arity=2, complexity=1),
-    Token(np.multiply, "mul", arity=2, complexity=1),
-    Token(np.divide, "div", arity=2, complexity=2),
+    # Token(np.add, "add", arity=2, complexity=1),
+    # Token(np.subtract, "sub", arity=2, complexity=1),
+    # Token(np.multiply, "mul", arity=2, complexity=1),
+    # Token(np.divide, "div", arity=2, complexity=2),
+
+    Token(add, "add", arity=2, complexity=1),
+    Token(sub, "sub", arity=2, complexity=1),
+    Token(mul, "mul", arity=2, complexity=1),
+    Token(div, "div", arity=2, complexity=2),
 
     # Built-in unary operators
-    Token(np.sin, "sin", arity=1, complexity=3),
-    Token(np.cos, "cos", arity=1, complexity=3),
-    Token(np.tan, "tan", arity=1, complexity=4),
-    Token(np.exp, "exp", arity=1, complexity=4),
-    Token(np.log, "log", arity=1, complexity=4),
-    Token(np.sqrt, "sqrt", arity=1, complexity=4),
-    Token(np.square, "n2", arity=1, complexity=2),
-    Token(np.negative, "neg", arity=1, complexity=1),
-    Token(np.abs, "abs", arity=1, complexity=2),
-    Token(np.maximum, "max", arity=1, complexity=4),
-    Token(np.minimum, "min", arity=1, complexity=4),
-    Token(np.tanh, "tanh", arity=1, complexity=4),
-    Token(np.reciprocal, "inv", arity=1, complexity=2),
-
-    # Custom unary operators
-    Token(logabs, "logabs", arity=1, complexity=4),
-    Token(expneg, "expneg", arity=1, complexity=4),
-    Token(n3, "n3", arity=1, complexity=3),
-    Token(n4, "n4", arity=1, complexity=3),
-    Token(sigmoid, "sigmoid", arity=1, complexity=4),
-    Token(harmonic, "harmonic", arity=1, complexity=4)
+    # Token(np.sin, "sin", arity=1, complexity=3),
+    # Token(np.cos, "cos", arity=1, complexity=3),
+    # Token(np.tan, "tan", arity=1, complexity=4),
+    # Token(np.exp, "exp", arity=1, complexity=4),
+    # Token(np.log, "log", arity=1, complexity=4),
+    # Token(np.sqrt, "sqrt", arity=1, complexity=4),
+    # Token(np.square, "n2", arity=1, complexity=2),
+    # Token(np.negative, "neg", arity=1, complexity=1),
+    # Token(np.abs, "abs", arity=1, complexity=2),
+    # Token(np.maximum, "max", arity=1, complexity=4),
+    # Token(np.minimum, "min", arity=1, complexity=4),
+    # Token(np.tanh, "tanh", arity=1, complexity=4),
+    # Token(np.reciprocal, "inv", arity=1, complexity=2),
+    #
+    # # Custom unary operators
+    # Token(logabs, "logabs", arity=1, complexity=4),
+    # Token(expneg, "expneg", arity=1, complexity=4),
+    # Token(n3, "n3", arity=1, complexity=3),
+    # Token(n4, "n4", arity=1, complexity=3),
+    # Token(sigmoid, "sigmoid", arity=1, complexity=4),
+    # Token(harmonic, "harmonic", arity=1, complexity=4)
 ]
 
 

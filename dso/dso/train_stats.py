@@ -325,20 +325,40 @@ class StatsLogger():
             eval_keys = list(results[0][-1].keys())
             columns = ["r", "count_on_policy", "count_off_policy", "expression", "traversal"] + eval_keys
             hof_results = [result[:-1] + [result[-1][k] for k in eval_keys] for result in results]
-            df = pd.DataFrame(hof_results, columns=columns)
-            if self.hof_output_file is not None:
-                print("Saving Hall of Fame to {}".format(self.hof_output_file))
-                df.to_csv(self.hof_output_file, header=True, index=False)
+            try:
+                try:
+                    df = pd.DataFrame(hof_results, columns=columns)
+                except:
+                    hof_results = [
+                        [str(item) for item in (result[:-1] + [result[-1][k] for k in eval_keys])]
+                        for result in results
+                    ]
+                    df = pd.DataFrame(hof_results, columns=columns)
+                if self.hof_output_file is not None:
+                    print("Saving Hall of Fame to {}".format(self.hof_output_file))
+                    df.to_csv(self.hof_output_file, header=True, index=False)
+            except:
+                # 创建标题行（假设 eval_keys 是 columns 的一部分）
+                header = "\t".join(columns)
+
+                # 将每一行的数据转化为字符串并用制表符分隔
+                rows = [header] + ["\t".join(str(item) for item in row) for row in hof_results]
+
+                # 将所有行连接成一个大的字符串，每行之间用换行符分隔
+                output_string = "\n".join(rows)
+
+                # 打印输出
+                print(output_string)
 
         # Save cache
-        if self.save_cache and Program.cache:
-            print("Saving cache to {}".format(self.cache_output_file))
-            cache_data = [(repr(p), p.on_policy_count, p.off_policy_count, p.r) for p in Program.cache.values()]
-            df_cache = pd.DataFrame(cache_data)
-            df_cache.columns = ["str", "count_on_policy", "count_off_policy", "r"]
-            if self.save_cache_r_min is not None:
-                df_cache = df_cache[df_cache["r"] >= self.save_cache_r_min]
-            df_cache.to_csv(self.cache_output_file, header=True, index=False)
+        # if self.save_cache and Program.cache:
+        #     print("Saving cache to {}".format(self.cache_output_file))
+        #     cache_data = [(repr(p), p.on_policy_count, p.off_policy_count, p.r) for p in Program.cache.values()]
+        #     df_cache = pd.DataFrame(cache_data)
+        #     df_cache.columns = ["str", "count_on_policy", "count_off_policy", "r"]
+        #     if self.save_cache_r_min is not None:
+        #         df_cache = df_cache[df_cache["r"] >= self.save_cache_r_min]
+        #     df_cache.to_csv(self.cache_output_file, header=True, index=False)
 
         # Compute the pareto front
         if self.save_pareto_front:
@@ -359,11 +379,30 @@ class StatsLogger():
             eval_keys = list(results[0][-1].keys())
             columns = ["complexity", "r", "count_on_policy", "count_off_policy", "expression", "traversal"] + eval_keys
             pf_results = [result[:-1] + [result[-1][k] for k in eval_keys] for result in results]
-            df = pd.DataFrame(pf_results, columns=columns)
-            if self.pf_output_file is not None:
-                print("Saving Pareto Front to {}".format(self.pf_output_file))
-                df.to_csv(self.pf_output_file, header=True, index=False)
+            try:
+                try:
+                    df = pd.DataFrame(pf_results, columns=columns)
+                except:
+                    pf_results = [
+                            [str(item) for item in (result[:-1] + [result[-1][k] for k in eval_keys])]
+                            for result in results
+                    ]
+                    df = pd.DataFrame(pf_results, columns=columns)
+                if self.pf_output_file is not None:
+                    print("Saving Pareto Front to {}".format(self.pf_output_file))
+                    df.to_csv(self.pf_output_file, header=True, index=False)
+            except:
+                # 创建标题行（假设 eval_keys 是 columns 的一部分）
+                header = "\t".join(columns)
 
+                # 将每一行的数据转化为字符串并用制表符分隔
+                rows = [header] + ["\t".join(str(item) for item in row) for row in pf_results]
+
+                # 将所有行连接成一个大的字符串，每行之间用换行符分隔
+                output_string = "\n".join(rows)
+
+                # 打印输出
+                print(output_string)
             # Look for a success=True case within the Pareto front
             for p in pf:
                 if p.evaluate.get("success"):
