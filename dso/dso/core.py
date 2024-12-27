@@ -109,17 +109,21 @@ class DeepSymbolicOptimizer():
 
         # Setup the model
         self.setup()
-        turn = 1
+        turn = 0
 
         # Train the model until done
-        while not self.trainer.done and turn <= 1000:
+        while not self.trainer.done and turn <= 100:
             result = self.train_one_step(start)
             turn += 1
 
-        if turn > 1000:
-            result['success'] = 0
+        if turn > 100:
+            # result['success'] = 0
+            result = {}
+            result.update({
+                'success': 0
+            })
             with open('log/result.log', mode='a') as rf:
-                print(f"{self.config['task']['dataset'].split('/')[8][:-4]} 0 0 {tt.time() - start} 0\n", file=rf)
+                print(f"{self.config['task']['dataset'].split('/')[7][:-4]} 0 0 {tt.time() - start} 0\n", file=rf)
         return result
 
     def finish(self, start):
@@ -138,7 +142,7 @@ class DeepSymbolicOptimizer():
             "program" : p
         })
         with open('log/result.log', mode='a') as rf:
-            print(f"{self.config['task']['dataset'].split('/')[8][:-4]} {repr(p.sympy_expr)} {'1' if repr(p.sympy_expr) == 'x1 + x2' else 0} {tt.time() - start} {repr(p)}\n", file=rf)
+            print(f"{self.config['task']['dataset'].split('/')[7][:-4]} {repr(p.sympy_expr).replace(' ', '')} {'1' if repr(p.sympy_expr) == 'x1 - x2' else 0} {tt.time() - start} {repr(p)}\n", file=rf)
 
         # Save all results available only after all iterations are finished. Also return metrics to be added to the summary file
         results_add = self.logger.save_results(self.pool, self.trainer.nevals)

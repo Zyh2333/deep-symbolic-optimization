@@ -32,7 +32,8 @@ def train_dso(config):
     start = time.time()
     result = model.train(start)
     result["t"] = time.time() - start
-    result.pop("program")
+    if "program" in result:
+        result.pop("program")
 
     save_path = model.config_experiment["save_path"]
     summary_path = os.path.join(save_path, "summary.csv")
