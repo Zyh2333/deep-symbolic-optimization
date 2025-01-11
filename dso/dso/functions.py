@@ -67,7 +67,10 @@ def div(x1, x2):
         if int(x2[i]) == 0:
             added.append(0)
         else:
-            added.append(int(x1[i]) // int(x2[i]))
+            try:
+                added.append(int(x1[i]) / int(x2[i]))
+            except:
+                added.append(int(x1[i]) // int(x2[i]))
     return added
 
 # Annotate unprotected ops

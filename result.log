@@ -1,0 +1,636 @@
+x1 + x2 1 5.600680828094482 add,x1,add,mul,sub,x2,x2,div,add,x1,x1,x2,x2
+
+x1 + x2 1 5.746432065963745 sub,add,add,x1,x1,x2,x1
+
+x1 + x2 1 5.248810768127441 add,x2,sub,add,x2,x1,x2
+
+x1 + x2 + 1/x1 0 5.169347763061523 sub,x1,add,x2,sub,sub,div,div,div,x2,div,sub,sub,x2,x2,x1,x2,x2,x2,x2,x2
+
+-x1**2/(-x1 - 2*x2) + x1 + x2 0 6.086126804351807 add,sub,x1,div,mul,x1,x1,sub,x1,add,add,x1,add,x1,x2,x2,x2
+
+x1 + x2 + 1/(x1*(x1 + 2*x2)) 0 5.623859167098999 add,x1,mul,div,add,div,div,x2,x2,mul,x1,add,x1,add,x2,x2,x2,x2,x2
+
+x1 + x2 - x2/(-x1 + 2*x2) 0 5.649929523468018 add,x1,sub,x2,div,x2,sub,x2,sub,x1,x2
+
+2*x1 + x2 0 5.462314605712891 add,add,mul,div,x1,x2,x2,x2,x1
+
+x1 - x1/(x1 + x2) + x2 0 6.430002927780151 add,x1,sub,x2,div,x1,add,x1,x2
+
+x1 + x2 1 5.388558626174927 sub,x1,mul,add,sub,sub,mul,mul,x2,sub,x2,x2,x2,div,x2,x2,x2,x2,x2
+
+x1 + x1/(x2*(x1/(-x1 + x2/x1) + x2)) + x2 0 5.341641664505005 add,add,mul,div,div,x1,mul,add,div,x1,sub,div,x2,x1,x1,x2,x2,x2,x2,x2,x1
+
+x2 + (x1*(x2 - 1) + x1)/x2 0 6.543926477432251 add,add,sub,div,add,mul,x1,sub,x2,div,x1,x1,x1,x2,x1,x2,x1
+
+x1 + x2 1 5.512450456619263 sub,x2,sub,div,sub,x2,x2,x2,x1
+
+-x1**3*x2 + x1 + x2 0 5.473270654678345 add,x2,sub,x1,mul,x2,mul,x2,div,mul,x1,x1,div,x2,x1
+
+x1 + x2 1 5.764651536941528 add,x1,x2
+
+x1 + x2 1 7.102301597595215 add,x2,sub,x1,mul,x1,div,mul,sub,x1,x1,add,x2,mul,sub,div,x2,x1,x1,x2,x2
+
+x1 + x2 - (x1 + x1/(2*x1 - x2))/x2 0 5.709080934524536 sub,x2,sub,div,add,x1,div,x1,sub,add,x1,x1,x2,x2,x1
+
+x1 - x1/x2 + x2 0 6.344075441360474 add,x2,sub,sub,x1,x2,sub,div,x2,mul,x2,div,x2,x1,x2
+
+x2 0 6.181339502334595 x2
+
+x1 + x2 1 5.542751789093018 add,x2,div,mul,x2,x1,x2
+
+x1 + x2 1 6.809509992599487 add,x1,sub,x1,sub,x1,x2
+
+x1 + x2 1 5.420031309127808 add,sub,sub,mul,add,x2,add,x2,x1,div,x2,x2,x1,x2,x1
+
+x1 + x1/x2 + x2 0 7.262522459030151 add,add,x2,div,div,mul,add,x1,div,sub,mul,x2,div,x1,x1,x2,x1,x1,x1,x2,x1
+
+x1 + 2*x1/x2 + x2 0 7.153151988983154 add,x2,add,div,x1,x2,add,x1,add,x1,sub,div,x1,x2,x1
+
+x1 + x2 + x2/(x1*(-x1 + (-x1 + 2*x2)/x1)) 0 5.737412214279175 add,add,div,x2,mul,sub,div,sub,add,x2,x1,sub,add,x1,x1,x2,x1,x1,x1,x2,x1
+
+2*x1 + x2 - (x1*x2 + x1)/x2 0 5.52821159362793 add,x1,sub,x2,add,x2,sub,sub,div,sub,add,x1,add,x2,mul,x2,x1,x2,x2,x2,x1
+
+x1 + x2 1 7.0583107471466064 add,x2,div,x1,div,x2,x2
+
+x1 + x2 1 5.616616249084473 add,x1,add,x2,div,mul,div,x2,x1,sub,x2,x2,x1
+
+2*x1 + x1*(x1 - x2 + 2)/x2 + x2 0 5.423321485519409 add,x1,add,x2,add,x1,div,mul,div,mul,sub,add,div,add,x1,x1,x1,x1,x2,x1,x2,x2,x2
+
+x1 + x2 1 7.81436014175415 add,mul,x1,div,x2,x2,x2
+
+x1 + x2 1 7.805828094482422 add,sub,x1,x2,add,x2,x2
+
+x1 + x2 + (-x1 + x2/x1)/x1 0 5.302769422531128 add,x2,add,div,div,x1,mul,div,x1,mul,sub,div,x2,x1,x1,x1,x1,x1,x1
+
+x1*x2/(x1**2*x2*(x1**2 + 2*x1) + x2) + x2 0 5.645836591720581 add,mul,div,x2,add,mul,mul,div,x1,div,div,x1,add,add,x1,mul,x1,x1,x1,x2,x1,x1,x2,x1,x2
+
+x1 - x1/x2 + x2 0 6.325204372406006 add,x2,sub,x1,div,x1,x2
+
+x1 + x2 + (-x1 + (x1 + x1*(x1 + x2*(-x1 + x2))/(x1 + x2))/x1)/x2 0 8.53607702255249 add,add,div,sub,div,add,div,x1,div,add,x1,x2,add,mul,sub,x2,x1,x2,x1,x1,x1,x1,x2,x1,x2
+
+x1 + x1/x2 + x2 0 5.703325510025024 add,mul,div,x1,x1,div,x1,x2,add,x2,x1
+
+x1*x2/(x1 + x2 + (1 - x1)/x2) + x1 + x2 0 7.022566556930542 add,add,x1,x2,mul,div,x1,add,add,x1,div,sub,div,x2,x2,x1,x2,x2,x2
+
+x1 + zoo*x1 + x2 0 5.666081428527832 add,x1,add,x2,div,x1,sub,x1,x1
+
+x1**2/(x1 + x1/x2) + x2 0 5.287464141845703 add,x2,div,x1,div,add,div,x1,x2,x1,x1
+
+x1 + x2 + 1 0 6.91815447807312 add,x2,add,div,div,x1,mul,add,sub,div,x1,mul,x2,x1,x2,x2,x2,x1,x1
+
+x1 + x2 - x2/(x1*(x1 + x2*(-x1 + x1/x2**2 - x2) - x2)) 0 6.2604241371154785 sub,x2,sub,div,div,x2,add,x1,sub,mul,x2,sub,sub,div,x1,mul,x2,x2,x2,x1,x2,x1,x1
+
+2*x2 0 5.7571799755096436 add,x2,sub,x1,div,x1,div,x1,sub,x1,mul,div,x1,x1,x2
+
+x1 + x2 1 6.108183860778809 add,x1,sub,x2,sub,x2,x2
+
+x1 + x1/x2 + x2 + x2/(x1 + x2**2 + x2) 0 5.964079856872559 add,add,x1,x2,add,div,x1,x2,div,x2,add,mul,x2,x2,add,x1,x2
+
+x1 + x2 1 5.594517707824707 sub,add,x1,x2,sub,x1,x1
+
+x2 0 5.573218584060669 add,x2,add,x2,sub,sub,x1,x2,mul,x2,div,x1,x2
+
+x1 + x2/2 0 6.641510963439941 add,x2,sub,x1,mul,x2,sub,add,div,mul,div,x2,x1,x1,add,x2,x2,x1,x1
+
+x1 + x1/x2 + x2 0 5.610694885253906 add,add,x1,div,x1,x2,x2
+
+x1 - x1/x2**3 + x2 0 5.373235702514648 add,sub,x2,div,add,x2,sub,add,x1,sub,div,x1,mul,x2,x2,x1,x2,x2,x1
+
+x1*(x1/(-2*x1 + 2*x2) + x2)/x2 + x2 0 6.659757137298584 add,x2,mul,x1,div,add,div,x1,mul,add,x2,x2,div,sub,x2,x1,x2,x2,x2
+
+x1 + x2 + 1/x2 0 6.281670331954956 add,add,x1,x2,div,div,x2,x2,x2
+
+x1 + x2 + (x1 + x1/x2)/x2 0 5.740616321563721 add,x2,add,x1,div,mul,div,mul,x1,div,sub,add,add,div,x1,x2,x1,x1,x1,x2,x2,x2,x1
+
+x1 + x2 1 5.604420185089111 add,div,sub,add,x1,add,x2,x1,x2,div,x1,sub,x2,x2,add,x1,x2
+
+x1**2/(x2*(2 - x2/x1)) + x1 + x2 0 6.7072741985321045 add,add,x1,div,x1,div,mul,sub,div,add,x1,x1,x1,div,x2,x1,x2,x1,x2
+
+x1 + x2 1 5.810499668121338 add,x1,sub,x2,mul,sub,x1,x1,sub,x1,add,x1,x1
+
+x1 - x1/(2*x1 - x2) + x2 0 5.433226585388184 sub,x2,sub,div,x1,sub,add,x1,x1,x2,x1
+
+x1 + x2 1 7.603888988494873 add,add,x2,x1,div,sub,add,x2,mul,x2,sub,sub,x1,sub,x2,x2,x1,x2,x1
+
+x1 + x2 1 5.877716541290283 add,sub,x2,x1,add,x1,x1
+
+x1 + x2 1 6.128740072250366 sub,add,x2,add,x2,div,sub,x2,x2,x2,sub,x2,x1
+
+x1 + x2 1 7.390482425689697 add,sub,x1,x2,add,sub,x2,sub,x1,x2,x1
+
+x1 + x2 1 7.880008935928345 add,add,x1,sub,x1,x1,x2
+
+x1**2/x2 + x1 + x2 0 5.467060565948486 add,x1,add,div,mul,x1,x1,x2,x2
+
+-x1**2/x2 + x1 + x2 0 6.053820610046387 sub,x2,add,x2,sub,sub,mul,div,x1,x2,x1,x1,x2
+
+x1 - x1/x2 + x2 0 6.352658748626709 sub,add,x1,x2,div,sub,x1,div,sub,x1,x1,div,div,x1,x1,x1,x2
+
+x1 + x2 1 5.81742000579834 add,sub,sub,x1,x1,sub,sub,x1,x2,x1,x1
+
+x1**2/x2 + x1 + x2 0 5.578956604003906 add,x2,add,div,mul,x2,div,mul,x1,x1,div,mul,x2,x1,x1,x2,x1
+
+x1 + x2 1 6.9551920890808105 sub,add,x2,x1,mul,sub,add,div,sub,div,mul,x1,x1,x1,x1,x1,x1,x1,x2
+
+x1*(x2 - (-x1 - x1/x2)/x1)/x2 + x2 0 5.639997720718384 add,mul,div,sub,x2,div,add,sub,sub,div,sub,x2,add,x1,x2,x2,x1,x1,x1,x1,x2,x1,x2
+
+x1 + x1/(x2 - x2/x1) + x2 0 6.726307153701782 add,x1,add,x2,div,x1,sub,x2,div,x2,x1
+
+x1*x2/(x1 + x2) + x2**2/(x1 + x1/x2) + x2 0 8.536989212036133 add,div,x2,div,add,div,x1,x2,x1,x2,add,div,mul,x1,x2,add,x1,x2,x2
+
+x1 + x2 1 6.756654500961304 add,sub,x2,x2,sub,x1,sub,x1,add,x1,x2
+
+-2*x1**2/(x1 - 3*x2/x1) + x1 + x2 0 7.8618268966674805 add,x1,sub,x2,div,add,x1,x1,div,sub,x1,div,add,add,x2,x2,x2,x1,x1
+
+x1 + x2 - 1/x2 0 6.598840713500977 add,x1,sub,x2,div,div,add,x1,sub,x2,x2,x1,x2
+
+x1**2/x2 + x1 + x2 0 5.195359230041504 add,x2,add,mul,div,x1,x2,add,mul,sub,x1,x1,div,x1,x2,x1,x1
+
+x1 + x2 1 5.261397838592529 add,x2,x1
+
+3*x1 + x2 0 5.290920257568359 add,x1,add,x2,div,mul,div,x1,x1,x1,div,x2,mul,div,add,x2,x2,x2,x2
+
+(x1 + x2*(x1 + x2))*(x2 + 1)/x2**2 0 8.231961011886597 mul,div,add,x2,div,x2,x2,x2,div,add,x1,mul,x2,add,x2,x1,x2
+
+x1 - x1/x2 + x2 0 8.389102458953857 add,x2,sub,x1,div,x1,x2
+
+x1**2/x2 + x1 + x2 0 8.254037380218506 add,x1,add,div,x1,div,x2,x1,div,mul,x2,x2,x2
+
+x1 - x1/(x1 + 1) + x2 0 6.454029321670532 add,sub,sub,x1,sub,x2,x2,div,x1,add,x1,div,x2,x2,x2
+
+x1 + x2 1 5.6777870655059814 add,mul,div,x1,x1,x1,x2
+
+x1*(x1 + x2)/x2 + x2 0 7.154486894607544 add,x2,div,add,x2,x1,div,x2,x1
+
+x1 + x1/(x2*(x1**2*x2**2 - x1)) + x2 0 7.479833126068115 add,x1,add,x2,div,x1,mul,x2,sub,mul,x1,mul,mul,x2,x1,x2,x1
+
+x1 + x2 + x2/(x1**2*(-x1 + x2)) 0 5.508756637573242 add,add,x2,x1,div,x2,mul,x2,mul,mul,x1,x1,div,sub,x2,x1,x2
+
+x1 + x2 - x2*(x1*x2 + x2)/x1**2 0 7.018725872039795 add,x1,sub,x2,div,x2,div,x1,div,add,mul,mul,div,x1,x1,x2,x1,x2,x1
+
+x1*(x2 + (x1**2 + x1)/x2)/x2 + x2 0 7.654009580612183 add,x2,div,mul,add,x2,div,add,div,mul,x1,mul,x1,x1,x1,x1,x2,x1,x2
+
+2*x1 + x2 0 5.740431308746338 sub,add,x1,add,x1,add,add,x2,sub,mul,div,x1,x2,x2,x1,x1,x1
+
+x1 + x2 1 6.462077856063843 add,add,x2,x1,mul,sub,x1,x1,sub,div,x2,x2,x2
+
+x1 + x1/x2 + x2 0 6.633564233779907 add,sub,add,x2,sub,x2,sub,sub,x2,x2,x1,x2,div,x1,x2
+
+x1 + x2 + 1/(x1*x2**4) 0 6.098272800445557 add,add,x1,x2,div,div,x2,x2,mul,mul,mul,mul,x2,x2,x2,x2,x1
+
+x1 + x2 + x2/(x1*(-x1 + x2**2) + x1 + 2*x2) 0 5.550191402435303 add,x1,add,div,x2,add,add,x2,x1,add,mul,sub,mul,x2,x2,x1,x1,x2,x2
+
+x1 + x2 1 5.85744571685791 add,x2,add,x1,mul,sub,x1,x1,sub,x1,add,x1,x1
+
+3*x1 + x2 - x2/x1 0 5.617021322250366 add,x1,sub,x2,div,x1,div,x1,add,sub,sub,sub,div,x2,x1,x2,x1,x1,x2
+
+x1 + x2 1 5.0203940868377686 sub,x1,sub,mul,x1,mul,mul,sub,x2,x2,x2,add,sub,x2,x2,x1,x2
+
+-x1*x2/(-x1 + x2 + 1) + 2*x1 + x2 0 4.957845449447632 add,x1,sub,add,x1,x2,div,x2,div,add,sub,add,sub,div,x1,x1,x1,x1,x1,x2,x1
+
+x1 + x2 - 1/(x1*(x1*x2 + x2)) 0 5.189759731292725 add,x2,sub,x1,div,x2,mul,add,x2,mul,x1,x2,mul,x1,x2
+
+x1**3/x2 + x1 + x2 0 5.14385461807251 add,x2,add,x1,div,mul,x1,x1,div,x2,x1
+
+x1**2/x2**2 + x1 + x2 0 5.0710413455963135 add,add,x1,x2,mul,x1,div,x1,mul,x2,x2
+
+x1 + x2 1 4.826506614685059 sub,x2,sub,sub,x2,mul,x2,sub,x1,x1,add,x2,x1
+
+x1 + x1/x2 + x2 0 4.966424465179443 add,div,x1,x2,add,mul,x1,sub,x1,div,mul,add,sub,sub,x1,x2,div,x1,x1,x2,x2,x2,x2
+
+x1 + x2 1 4.704930782318115 add,add,x2,mul,sub,x1,x1,mul,x1,mul,x2,div,x2,x2,x1
+
+x1 + x2 1 4.553083658218384 add,x2,add,sub,x1,x1,x1
+
+x1 - x1/x2**2 + x2 0 4.607851266860962 add,x1,sub,x2,mul,x1,div,x1,mul,mul,x2,x2,x1
+
+x1 + x2 1 4.796978950500488 add,sub,x1,x1,add,x2,x1
+
+x1 - x1/x2 + x2 0 4.572303295135498 sub,x1,sub,div,x1,x2,x2
+
+x1 + x2 + (x1 + x2)/x2**2 0 4.637052536010742 add,x2,add,x1,div,div,add,x2,x1,div,x1,div,x1,x2,x2
+
+x1 + x1/(x1*x2 + x1) + x2 0 4.819816827774048 add,x1,add,x2,div,x1,add,x1,mul,x2,x1
+
+x1 + x2 - 1/2 0 4.787458896636963 add,x1,sub,x2,div,x2,add,x2,x2
+
+-x1*x2/(x1 + x2 + x2/x1) + x1 + x2 0 4.711782693862915 add,x1,sub,x2,mul,x2,div,x1,add,add,x2,div,x2,x1,x1
+
+x1 + x1/x2 + x2 0 4.593614339828491 add,add,x2,add,div,x1,x2,x2,sub,div,mul,x2,x1,x2,x2
+
+x1 + x2**2/(-x1 + x2) 0 4.601139545440674 add,x1,mul,x2,div,x2,sub,x2,x1
+
+x1 + x2 + 1 0 4.778356313705444 add,x2,add,div,div,x1,mul,add,sub,div,x1,mul,x2,x1,x2,x2,x2,x1,x1
+
+x1**2/(-x1 + (x1 - x2)/x1**2) + 2*x1 + x2 0 4.487941741943359 add,add,add,x1,x1,mul,div,x1,sub,div,div,sub,x1,x2,x1,x1,x1,x1,x2
+
+x1 + x1/(x1**2 + x2) + x2 0 4.62236762046814 add,add,x2,x1,div,mul,mul,div,x2,mul,add,mul,x1,x1,x2,x1,x1,x1,x2
+
+x1 + x2 1 4.649687767028809 add,x1,sub,x2,sub,x2,x2
+
+x1 + x1/x2 + x2 + x2/(x1 + x2**2 + x2) 0 4.871685743331909 add,add,x1,x2,add,div,x1,x2,div,x2,add,mul,x2,x2,add,x1,x2
+
+x1 + x2 1 4.916659116744995 sub,add,x1,x2,sub,x1,x1
+
+x2 0 5.284461259841919 add,x2,add,x2,sub,sub,x1,x2,mul,x2,div,x1,x2
+
+x2 0 12915.001819610596 x2
+
+x1 + x1/(x1 + x2) + x2 0 4.548202037811279 add,x1,add,x2,div,x1,add,x2,x1
+
+x1 + x2 1 4.516195774078369 add,x2,add,x1,sub,x1,x1
+
+x1*(x1/(-2*x1 + 2*x2) + x2)/x2 + x2 0 4.756161689758301 add,x2,mul,x1,div,add,div,x1,mul,add,x2,x2,div,sub,x2,x1,x2,x2,x2
+
+x1 + x2 + 1/x2 0 4.41389536857605 add,add,x1,x2,div,div,x2,x2,x2
+
+x1 + x2 + (x1 + x1/x2)/x2 0 4.637348175048828 add,x2,add,x1,div,mul,div,mul,x1,div,sub,add,add,div,x1,x2,x1,x1,x1,x2,x2,x2,x1
+
+x1 + x2 + 1/x1 0 4.653551816940308 add,add,div,div,x2,x2,x1,sub,add,add,x2,mul,x2,sub,x2,x2,x2,x2,x1
+
+x1 + x2 1 4.5748984813690186 sub,x2,sub,div,div,mul,div,x2,x1,sub,x1,x1,x1,x1,x1
+
+-x1*x2/(-x1 - 2*x2 - 1) + x2 0 4.480742931365967 sub,x2,mul,x1,div,x2,sub,sub,sub,div,sub,sub,x1,x2,x1,x2,x2,x1,x2
+
+-x1*x2**2*(x1 - x2) + x2 0 4.65568995475769 sub,x2,div,x1,div,x2,mul,add,mul,x2,mul,x2,sub,x1,x2,sub,x1,x1,x2
+
+x1 + x2 1 4.549165725708008 add,add,x2,x1,div,sub,add,x2,mul,x2,sub,sub,x1,sub,x2,x2,x1,x2,x1
+
+x1 + x2 1 4.428584575653076 add,x1,div,x2,div,x2,x2
+
+x1 + x2 + x2/(x1*(x1*x2 + x1)) 0 4.784477949142456 add,x2,add,x1,div,x2,mul,add,mul,sub,add,x1,x2,x1,x1,x1,x1
+
+x1 + x2 1 4.445725917816162 add,sub,x1,x2,add,sub,x2,sub,x1,x2,x1
+
+x1 + x2 1 4.58459210395813 add,add,x1,sub,x1,x1,x2
+
+x1**2/x2 + x1 + x2 0 4.479322671890259 add,x1,add,div,mul,x1,x1,x2,x2
+
+-x1**2/x2 + x1 + x2 0 4.440319061279297 sub,x2,add,x2,sub,sub,mul,div,x1,x2,x1,x1,x2
+
+x1 - x1/x2 + x2 0 4.560843229293823 sub,add,x1,x2,div,sub,x1,div,sub,x1,x1,div,div,x1,x1,x1,x2
+
+x1 + x2 1 4.717815399169922 add,sub,sub,x1,x1,sub,sub,x1,x2,x1,x1
+
+x1 + x2 1 4.449809789657593 div,mul,x2,add,x2,x1,x2
+
+x1 + x2 1 4.5357277393341064 sub,add,x2,x1,mul,sub,add,div,sub,div,mul,x1,x1,x1,x1,x1,x1,x1,x2
+
+x1 + x1/x2 + x2 0 4.816168546676636 add,x2,sub,add,x1,x2,add,sub,sub,x2,div,add,sub,x1,x1,x1,x2,x2,x2
+
+x1 + x2 + 1/x2 0 4.528724670410156 add,add,x1,x2,div,x1,mul,x2,x1
+
+x2*(-x1 - x2)/(x1 - x2) 0 4.413228750228882 sub,add,div,sub,sub,sub,x1,x1,x2,x1,div,sub,x1,x2,x2,x1,x1
+
+x1 + x2 1 4.732893466949463 add,sub,x2,x2,sub,x1,sub,x1,add,x1,x2
+
+x1*(-2*x1 + x2 + 1 + x2/x1)/x2 + x2 0 4.495153427124023 add,div,mul,x1,mul,div,sub,x2,sub,x1,sub,add,div,x2,x2,div,x2,x1,x1,x1,x1,x2,x2
+
+x1 + x2 - 1/x2 0 4.507642507553101 add,x1,sub,x2,div,div,add,x1,sub,x2,x2,x1,x2
+
+x1**2/x2 + x1 + x2 0 4.3377685546875 add,x2,add,mul,div,x1,x2,add,mul,sub,x1,x1,div,x1,x2,x1,x1
+
+x1 + x2 1 4.563992500305176 add,x2,x1
+
+3*x1 + x2 0 4.398700475692749 add,x1,add,x2,div,mul,div,x1,x1,x1,div,x2,mul,div,add,x2,x2,x2,x2
+
+(x1 + x2*(x1 + x2))*(x2 + 1)/x2**2 0 4.512614727020264 mul,div,add,x2,div,x2,x2,x2,div,add,x1,mul,x2,add,x2,x1,x2
+
+x1*x2/(x1*x2 + x1) + x1 + x2 0 4.455265045166016 add,x1,add,x2,mul,x2,sub,add,div,x1,add,mul,x1,x2,x1,x1,x1
+
+x1 - x1*(x1 + x2)/x2 + x2 0 6518.888203382492 div,mul,sub,x2,sub,div,mul,x1,x2,mul,div,x2,add,x2,x1,x2,x1,x1,x1
+
+x1 + x2 - 2/x1 0 4.695709228515625 add,x1,sub,x2,mul,x1,sub,x2,sub,x2,div,div,div,add,x2,x2,x1,x1,x2
+
+x1 + x2 1 4.602548360824585 add,mul,div,x1,x1,x1,x2
+
+x1*(x1 + x2)/x2 + x2 0 4.515228033065796 add,x2,div,add,x2,x1,div,x2,x1
+
+x1 + x1/(x2*(x1**2*x2**2 - x1)) + x2 0 4.705150604248047 add,x1,add,x2,div,x1,mul,x2,sub,mul,x1,mul,mul,x2,x1,x2,x1
+
+x1 + x2 + x2/(x1**2*(-x1 + x2)) 0 4.747805118560791 add,add,x2,x1,div,x2,mul,x2,mul,mul,x1,x1,div,sub,x2,x1,x2
+
+x1 + x2 - x2*(x1*x2 + x2)/x1**2 0 4.573647737503052 add,x1,sub,x2,div,x2,div,x1,div,add,mul,mul,div,x1,x1,x2,x1,x2,x1
+
+x1*(x2 + (x1**2 + x1)/x2)/x2 + x2 0 4.587580919265747 add,x2,div,mul,add,x2,div,add,div,mul,x1,mul,x1,x1,x1,x1,x2,x1,x2
+
+x1 + x2 - x2/(x1 + x2) 0 6127.87170124054 sub,sub,x1,sub,div,x2,add,x2,x1,x2,sub,x2,add,sub,x2,x2,x2
+
+x1 + x1/(x1 + x2) + x2 0 4.503204584121704 add,x2,add,x1,div,div,x1,div,mul,div,x1,x2,add,x2,x1,x1,x2
+
+x1 + x2 - 1/(2*x1*x2) 0 4.79511022567749 add,x2,sub,x1,div,x1,div,x2,div,div,div,x2,add,x1,x1,x2,x1
+
+x1 + x2 + 1/(x1*x2**4) 0 4.622953653335571 add,add,x1,x2,div,div,x2,x2,mul,mul,mul,mul,x2,x2,x2,x2,x1
+
+x1 + x2 + x2/(x1*(-x1 + x2**2) + x1 + 2*x2) 0 4.486222982406616 add,x1,add,div,x2,add,add,x2,x1,add,mul,sub,mul,x2,x2,x1,x1,x2,x2
+
+x1 + x2 1 4.629841089248657 add,x2,add,x1,mul,sub,x1,x1,sub,x1,add,x1,x1
+
+3*x1 + x2 - x2/x1 0 4.601080656051636 add,x1,sub,x2,div,x1,div,x1,add,sub,sub,sub,div,x2,x1,x2,x1,x1,x2
+
+x1 + x2 1 4.570342779159546 sub,x1,sub,mul,x1,mul,mul,sub,x2,x2,x2,add,sub,x2,x2,x1,x2
+
+-x1*x2/(-x1 + x2 + 1) + 2*x1 + x2 0 4.571037769317627 add,x1,sub,add,x1,x2,div,x2,div,add,sub,add,sub,div,x1,x1,x1,x1,x1,x2,x1
+
+x1 + x2 - 1/(x1*(x1*x2 + x2)) 0 4.938108682632446 add,x2,sub,x1,div,x2,mul,add,x2,mul,x1,x2,mul,x1,x2
+
+x1**3/x2 + x1 + x2 0 5.074094295501709 add,x2,add,x1,div,mul,x1,x1,div,x2,x1
+
+x1 - x1/(x1 - x2**2/(x1*(x1 - x2))) + x2 0 4.880305767059326 sub,add,x1,x2,div,x1,sub,x1,mul,x2,div,x2,mul,sub,x1,x2,x1
+
+x1 + x2 1 4.657513856887817 sub,sub,add,x1,x2,sub,x1,add,x1,x1,x1
+
+x1 + x2 1 5.1075005531311035 add,x1,sub,x2,sub,x1,sub,x2,sub,add,sub,x2,x1,x1,x1
+
+x1 + x2 1 4.783032417297363 add,x1,sub,x2,add,x2,sub,sub,x1,x1,x2
+
+x1 + x2 + 1/2 0 4.770360946655273 add,add,sub,div,x1,add,x1,x1,x1,x1,add,div,x1,div,x1,x1,x2
+
+x1 + x2 + x2**2/x1 0 5.087405443191528 add,add,div,x2,div,x1,x2,x2,x1
+
+x1 + x2 + x2/(x1 + x2 + 1) 0 4.883216857910156 add,x2,add,x1,div,x2,add,add,div,x1,add,x1,sub,x1,x1,x2,x1
+
+x1 + x2 - 1/x2 0 4.8126444816589355 sub,x1,sub,div,x2,mul,x2,x2,x2
+
+x1 + x2**2 + x2 0 5.050940036773682 add,x2,add,x1,div,mul,x2,x1,sub,add,x1,div,x1,x2,x1
+
+-x1**2/(-x2*(x1 + 2*x2) + x2) + x2 0 4.969234943389893 sub,x2,mul,x1,div,x1,sub,x2,mul,x2,add,add,x2,x2,x1
+
+x1 + x2 1 4.923315525054932 add,x2,sub,add,x1,x1,x1
+
+x1 + x2 1 4.961780309677124 add,add,div,add,sub,div,div,x2,x2,div,x2,sub,x2,x2,x2,x2,x2,x2,x1
+
+x1 + x2 1 4.759689569473267 add,x1,add,x2,div,sub,x2,x2,add,div,x1,div,x1,x2,x2
+
+x1 + zoo*x1 + x2 0 5.035832643508911 add,x2,add,x1,div,x1,mul,sub,x1,div,x1,div,x2,div,mul,x2,x1,x1,x2
+
+x1 + x1/(x1**2 - x2) + x2 0 4.8324503898620605 add,x1,add,x2,mul,div,x1,x2,div,x2,sub,mul,x1,x1,x2
+
+x1 + x1*(x1 + x2)/(x2*(-x2 + x2**2/x1)) + x2 0 4.7979066371917725 add,x1,add,x2,div,x1,mul,div,x2,add,x1,x2,sub,div,x2,div,x1,x2,x2
+
+x1 + x2 1 4.8535473346710205 add,x1,x2
+
+x1 + x2 1 4.671318769454956 add,add,x2,x1,sub,x2,x2
+
+x1 + x2 + zoo*x2 0 4.756513833999634 add,x2,sub,x1,div,add,x2,x2,div,mul,div,sub,x2,x2,x1,x2,x2
+
+x1 + x2 1 4.704614639282227 add,x2,sub,x1,div,mul,sub,x1,x1,mul,x2,x2,x2
+
+x1 + x2 - 1/(x1**2*x2**2) 0 5.03100848197937 add,x1,sub,x2,div,div,div,div,x2,x1,x1,x2,mul,x2,x2
+
+x1 - x1/x2 + x2 0 4.982205152511597 sub,add,x2,x1,div,x1,x2
+
+x1 + x2 1 4.895537614822388 add,x2,add,x1,sub,x2,x2
+
+x1 + x1/x2 + x2 0 4.788313865661621 add,add,x1,div,x1,x2,x2
+
+x1 + x2 + 1 0 5.167839527130127 add,x2,add,x1,mul,div,x2,x1,div,x1,x2
+
+-x1**2*(-x1*x2 + x2)/x2 + x1 + x2 0 4.880924701690674 add,sub,x2,mul,mul,x1,div,x1,x2,sub,sub,add,sub,add,x1,x2,mul,x2,x1,x1,x1,x1,x1
+
+x1 + x2 + x2/(x1*(-x1 + 3*x2)) 0 4.920728445053101 add,x1,add,add,x1,x2,sub,div,x2,mul,add,x2,sub,add,x2,x2,x1,x1,x1
+
+x1 + x1/x2**2 + x2 + x2*(x1 + x2)/x1 0 5.140242338180542 add,x1,add,div,add,x2,x1,div,x1,x2,add,div,x1,mul,x2,x2,x2
+
+x1 + x2 1 4.978882312774658 add,x1,sub,x2,div,sub,x2,x2,mul,x1,div,div,sub,mul,x1,x1,x1,x1,x2
+
+x1 + x2 1 4.869354963302612 add,x2,mul,x1,div,x1,x1
+
+x1 + x2 1 4.894617557525635 add,x1,div,x2,div,x2,x2
+
+x1 + x2 - x2/(x1 - x2) 0 4.4498608112335205 add,x2,sub,x1,div,x2,mul,div,x1,x1,mul,x1,div,sub,x1,x2,x1
+
+x1 + x2 1 4.780527830123901 sub,add,add,x2,x1,x1,x1
+
+x1**2*x2/(x1**2 + x1) + x1 0 4.374574184417725 add,x1,mul,div,x2,mul,x2,div,div,add,sub,mul,x1,x1,sub,x2,x2,x1,x1,x1,x2
+
+x1 + x1/x2**2 + x2 0 4.449822664260864 add,x1,add,div,mul,x1,div,x1,sub,add,x1,mul,x2,x2,x1,x1,x2
+
+x1 + x2 1 4.679246187210083 add,x1,x2
+
+x1 + x2 1 4.340836763381958 add,add,x2,x1,mul,x2,mul,x2,sub,x2,x2
+
+x1 + x2 + 1/x1 0 4.447746276855469 add,add,div,x2,mul,x1,x2,x1,x2
+
+x1 + x2 - 1/(x1*(x1**2*x2**2 + x1 - x2)) 0 7.380232572555542 add,x2,sub,x1,div,x2,mul,mul,sub,add,mul,x2,mul,mul,x1,x2,x1,x1,x2,x1,x2
+
+x1*(x1**2 + 2*x1 + x2)/x2 + x2 0 4.549644708633423 add,x2,mul,div,add,add,x1,sub,mul,x1,x1,sub,sub,x2,x1,x2,x2,x2,x1
+
+x1*x2/(x1*x2*(-x1 + x2) + x2) + x1 + x2 0 4.624441385269165 add,add,x1,x2,mul,div,x1,add,mul,x2,mul,x1,sub,x2,x1,x2,x2
+
+x2 0 4.452954530715942 add,sub,x2,mul,div,x1,x2,x2,x1
+
+x1 + x1/x2 + x2 0 4.524634838104248 add,x2,sub,add,x1,x2,add,sub,sub,x2,div,add,sub,x1,x1,x1,x2,x2,x2
+
+x1 + x2 + 1/x2 0 4.738845109939575 add,add,x1,x2,div,x1,mul,x2,x1
+
+x2*(-x1 - x2)/(x1 - x2) 0 4.25055718421936 sub,add,div,sub,sub,sub,x1,x1,x2,x1,div,sub,x1,x2,x2,x1,x1
+
+x1 + x2 - 1/x1 0 4.66268253326416 add,x2,sub,x1,div,div,x2,x1,x2
+
+x1 + x2 1 4.442815542221069 add,mul,x2,div,x1,x1,x1
+
+x1 + x2 - 1/x2 0 4.4708240032196045 add,x1,sub,x2,div,div,add,x1,sub,x2,x2,x1,x2
+
+x1**2/x2 + x1 + x2 0 4.334913730621338 add,x2,add,mul,div,x1,x2,add,mul,sub,x1,x1,div,x1,x2,x1,x1
+
+x2 0 12810.733823537827 sub,x2,sub,div,x1,div,mul,div,sub,mul,x1,div,x2,x1,sub,x2,x2,x2,x1,x1,x1
+
+x1*(x1 + x2 + (2*x1 + x2)/x1**2)/x2 + x2 0 4.35749363899231 add,x2,mul,x1,div,add,x1,add,x2,div,div,add,add,x1,x2,x1,x1,x1,x2
+
+x1 + x2 1 4.746652603149414 add,sub,add,x2,x1,x1,x1
+
+x1*x2/(x1*x2 + x1) + x1 + x2 0 4.419760227203369 add,x1,add,x2,mul,x2,sub,add,div,x1,add,mul,x1,x2,x1,x1,x1
+
+x1 - x1*(x1 + x2)/x2 + x2 0 4.740113019943237 div,mul,sub,x2,sub,div,mul,x1,x2,mul,div,x2,add,x2,x1,x2,x1,x1,x1
+
+x1 + x2 - 2/x1 0 4.432884216308594 add,x1,sub,x2,mul,x1,sub,x2,sub,x2,div,div,div,add,x2,x2,x1,x1,x2
+
+x1 + x2 1 4.407486200332642 add,mul,div,x1,x1,x1,x2
+
+x1*(x1 + x2)/x2 + x2 0 4.503303527832031 add,x2,div,add,x2,x1,div,x2,x1
+
+x1 + x1/(x2*(x1**2*x2**2 - x1)) + x2 0 4.559014320373535 add,x1,add,x2,div,x1,mul,x2,sub,mul,x1,mul,mul,x2,x1,x2,x1
+
+x1 + x2 + x2/(x1**2*(-x1 + x2)) 0 4.6095428466796875 add,add,x2,x1,div,x2,mul,x2,mul,mul,x1,x1,div,sub,x2,x1,x2
+
+x1 + x2 - x2/x1 0 4.698026418685913 add,sub,x1,mul,div,sub,div,x2,x1,div,sub,x1,x1,x2,x2,x2,x2
+
+x1*x2**2/((-x1 + x2)*(x1 + x2)) + x1 + x2 0 4.388202667236328 add,add,mul,div,mul,x1,div,x2,sub,x2,x1,add,x2,x1,x2,x2,x1
+
+x1 + x2 1 4.274094104766846 add,add,x1,mul,x1,div,x1,div,x1,mul,x1,mul,sub,x2,x2,x2,x2
+
+x1 + x1/(x1 + x2) + x2 0 4.520416736602783 add,x2,add,x1,div,div,x1,div,mul,div,x1,x2,add,x2,x1,x1,x2
+
+x1 + x2 - 1/(2*x1*x2) 0 4.430694818496704 add,x2,sub,x1,div,x1,div,x2,div,div,div,x2,add,x1,x1,x2,x1
+
+x1 + x2 + 1/(x1*x2**4) 0 4.504489183425903 add,add,x1,x2,div,div,x2,x2,mul,mul,mul,mul,x2,x2,x2,x2,x1
+
+x1 + x2 + x2/(x1*(-x1 + x2**2) + x1 + 2*x2) 0 4.240617036819458 add,x1,add,div,x2,add,add,x2,x1,add,mul,sub,mul,x2,x2,x1,x1,x2,x2
+
+x1 + x2 1 4.340986251831055 add,x2,add,x1,mul,sub,x1,x1,sub,x1,add,x1,x1
+
+3*x1 + x2 - x2/x1 0 4.441891193389893 add,x1,sub,x2,div,x1,div,x1,add,sub,sub,sub,div,x2,x1,x2,x1,x1,x2
+
+x1 + x2 1 4.402780294418335 sub,x1,sub,mul,x1,mul,mul,sub,x2,x2,x2,add,sub,x2,x2,x1,x2
+
+-x1*x2/(-x1 + x2 + 1) + 2*x1 + x2 0 4.424912452697754 add,x1,sub,add,x1,x2,div,x2,div,add,sub,add,sub,div,x1,x1,x1,x1,x1,x2,x1
+
+-2*x1**3 + x1 + x2 0 4.349816083908081 sub,add,x2,add,sub,x2,mul,x1,div,x1,div,div,x2,x1,add,x2,x2,x1,x2
+
+x1 + x2 - x2/(x1 + x2 + 1) 0 4.390092611312866 sub,add,x1,x2,mul,x1,div,x2,mul,add,div,x1,x1,add,x2,x1,x1
+
+x1 + x2 + 1/x1 0 4.476110935211182 add,x2,sub,x1,sub,x1,add,div,add,x2,x2,mul,add,x2,x2,x1,x1
+
+x1 + x2 1 4.331068992614746 sub,sub,add,x1,x2,sub,x1,add,x1,x1,x1
+
+x1 + x2 1 4.498895883560181 add,x1,sub,x2,sub,x1,sub,x2,sub,add,sub,x2,x1,x1,x1
+
+x1 + x2 1 4.474801778793335 add,x1,sub,x2,add,x2,sub,sub,x1,x1,x2
+
+x1 + x2 + 1/2 0 4.679103851318359 add,add,sub,div,x1,add,x1,x1,x1,x1,add,div,x1,div,x1,x1,x2
+
+x1*(x1 - x2) + x1 + x2 0 4.408384084701538 add,add,x1,div,add,x2,sub,sub,x1,x2,x2,div,x2,mul,x2,x1,x2
+
+x1 + x2 + x2/(x1 + x2 + 1) 0 4.4164228439331055 add,x2,add,x1,div,x2,add,add,div,x1,add,x1,sub,x1,x1,x2,x1
+
+x1 + x2 - 1/x2 0 4.562114953994751 sub,x1,sub,div,x2,mul,x2,x2,x2
+
+x1 + x1/(x2 + 2) + x2 0 4.488759517669678 add,x1,add,x2,div,x1,add,x1,add,sub,div,add,x1,x1,x1,x1,x2
+
+x1 + x2 1 4.427945137023926 add,x2,div,x1,div,x1,x1
+
+x1 + x2 - 1/x1 0 4.614375114440918 sub,x1,sub,div,x2,mul,x1,x2,x2
+
+x1 + x2 1 4.488206148147583 add,add,div,add,sub,div,div,x2,x2,div,x2,sub,x2,x2,x2,x2,x2,x2,x1
+
+x1 + x2 1 4.307262420654297 add,x1,add,x2,div,sub,x2,x2,add,div,x1,div,x1,x2,x2
+
+x1 + zoo*x1 + x2 0 4.632657289505005 add,x2,add,x1,div,x1,mul,sub,x1,div,x1,div,x2,div,mul,x2,x1,x1,x2
+
+x1 + x1/(x1**2 - x2) + x2 0 4.439773082733154 add,x1,add,x2,mul,div,x1,x2,div,x2,sub,mul,x1,x1,x2
+
+x1 + x2 - 1/2 0 4.5006585121154785 sub,x1,sub,x1,sub,add,x1,x2,div,x2,add,div,x2,div,x1,x1,x2
+
+x1 + x2 1 4.660127401351929 add,x1,x2
+
+x1 + x2 1 4.389436960220337 add,add,x2,x1,sub,x2,x2
+
+x1 + x2 1 4.340114116668701 add,x2,add,mul,div,x2,x1,sub,x2,x2,x1
+
+x1 + x2 + 1/x1 0 4.499999284744263 add,x1,add,x2,div,x1,mul,x1,x1
+
+x1 + x2 - 1/(x1**2*x2**2) 0 4.5276196002960205 add,x1,sub,x2,div,div,div,div,x2,x1,x1,x2,mul,x2,x2
+
+x1 - x1/x2 + x2 0 4.583956480026245 sub,add,x2,x1,div,x1,x2
+
+x1 + x2 1 4.468667507171631 add,x2,add,x1,sub,x2,x2
+
+x1 + x1/x2 + x2 0 4.351037502288818 add,add,x1,div,x1,x2,x2
+
+x1 + x2 + 1 0 4.990799903869629 add,x2,add,x1,mul,div,x2,x1,div,x1,x2
+
+-x1**2*(-x1*x2 + x2)/x2 + x1 + x2 0 4.649480104446411 add,sub,x2,mul,mul,x1,div,x1,x2,sub,sub,add,sub,add,x1,x2,mul,x2,x1,x1,x1,x1,x1
+
+x1 + x2 + x2/(x1*(-x1 + 3*x2)) 0 4.815939903259277 add,x1,add,add,x1,x2,sub,div,x2,mul,add,x2,sub,add,x2,x2,x1,x1,x1
+
+x1 + x1/x2**2 + x2 + x2*(x1 + x2)/x1 0 5.0212438106536865 add,x1,add,div,add,x2,x1,div,x1,x2,add,div,x1,mul,x2,x2,x2
+
+x1 + x2 - x2/(x1 + x2 + (x1*(x1*x2 - x2) + x1)/x1) 0 4.521261215209961 sub,x1,sub,div,x2,add,add,div,add,sub,mul,sub,mul,x1,x2,x2,x1,sub,x1,x1,x1,x1,x2,x1,x2
+
+x1 + x2 1 4.708511829376221 sub,x2,sub,x1,sub,x2,sub,x2,add,x1,x1
+
+x1 + x1/(x2**2*(x1*x2 - x1)) + x2 0 4.9316651821136475 add,x1,add,x2,mul,x2,div,x1,mul,mul,mul,sub,mul,x2,x1,x1,x2,x2,x2
+
+x1 + x2 + zoo*x2 0 4.67924165725708 add,x1,sub,x2,div,x2,div,mul,add,x2,add,sub,x1,x1,x1,sub,x2,x2,x1
+
+x1 + x2 1 7047.444919347763 sub,add,add,x1,div,mul,x1,x2,x1,x2,x2
+
+x2 - x2/(x1 - x2) 0 4.801806688308716 sub,x2,mul,x1,div,div,x2,sub,x1,x2,x1
+
+x1 + x2 1 4.929905891418457 add,x2,mul,x1,div,mul,x2,x2,mul,mul,x2,x1,div,x2,x1
+
+x1 + x2 - x2/(x1*x2 - x1) 0 5.121561765670776 sub,x2,sub,x2,add,x2,sub,x1,div,mul,x2,div,x2,sub,mul,x1,x2,x1,x2
+
+x1 + x2 + 1/(2*x1) 0 4.6510796546936035 add,div,x2,mul,x1,add,x2,x2,add,x2,x1
+
+x1*(x1 + x2)/(-x1 + x2*(x1 + x1/x2) + x2) + x1 + x2 0 4.889973878860474 add,sub,add,add,mul,x1,div,add,x1,x2,add,sub,mul,add,div,x1,x2,x1,x2,x1,x2,x1,x1,x1,x2
+
+x1 + x2 - x2/(x1*(-x1 + x2)) 0 4.830086946487427 add,sub,x2,div,x2,div,sub,x2,x1,div,x2,mul,sub,x2,sub,x2,x1,x2,x1
+
+2*x1 + x2 + 1/x1 0 4.864439964294434 add,add,add,x2,x1,mul,div,x1,x2,x2,div,div,x2,x1,x2
+
+x1 + x2 + (x1 + x2)*(x1*x2 + x1) 0 8.246696472167969 add,add,div,add,x2,x1,div,div,x1,add,x1,mul,x1,x2,x1,x2,x1
+
+x1 + x2 - zoo*x2 0 4.758774757385254 sub,x1,sub,div,sub,x1,add,x1,x2,mul,x1,div,div,sub,x2,x2,x1,x1,x2
+
+x1 + x2 1 4.7636497020721436 add,x2,sub,x1,div,x2,mul,mul,x1,sub,add,div,x2,sub,x1,x1,x1,x1,x1
+
+x1 + x2 1 5.092235803604126 add,x2,add,div,sub,x1,x1,x1,x1
+
+x1 + x2 1 4.814339637756348 sub,x1,sub,mul,sub,x1,x1,add,x1,x2,x2
+
+x1 + x2 + (x1 - x2)/(-x1*x2 + 2*x1) 0 4.784627437591553 add,add,div,sub,x1,x2,div,mul,x2,add,sub,x1,mul,x1,x2,x1,x2,x1,x2
+
+x1 + x1/(2*x1 + x2) + x2 0 4.748448848724365 add,add,x1,div,x1,add,add,x1,x2,x1,x2
+
+x1 - x1/(-x2**3 + x2) + x2 0 5.16628623008728 sub,x2,sub,div,x1,sub,x2,mul,div,x2,div,x1,sub,add,mul,x1,x2,x2,x2,x2,x1
+
+2*x1 + x2 0 5.076325178146362 sub,add,add,x2,mul,x2,div,mul,div,x1,x2,x1,x1,add,x2,x1,x2
+
+x1 + x2 - (x1 + x2/(x1 + x2))/x1 0 4.832503318786621 add,x2,sub,x1,mul,div,div,add,div,div,mul,x1,x2,add,x1,x2,x1,x1,x2,x1,x2
+
+x1 + x2 1 4.885662794113159 add,add,x1,x2,mul,sub,x1,x1,x2
+
+-x1*x2*(x2**2 + x2) + x1 + x2 0 4.987623453140259 sub,x1,sub,div,x2,div,div,div,x2,add,x2,mul,x2,x2,x2,x1,x2
+
+x1**2/x2 + x1 + x2 0 4.674318790435791 add,x1,add,mul,x1,div,x1,x2,x2
+
+x1 + x1*(x1**2 + x1 + x2**2)/x2**2 + x2 0 4.82199764251709 add,x2,add,div,x1,mul,x2,div,x2,add,add,mul,x1,x1,mul,x2,x2,x1,x1
+
+-x1**3/(x1*x2 + 2*x1) + x1 + x2 0 5.007554769515991 add,sub,x1,mul,x1,mul,div,x1,add,mul,div,add,x1,x1,x1,x1,mul,x2,x1,x1,x2
+
+x1 - x1/(-x1 + x2) + x2 0 4.677631139755249 add,x2,sub,x1,div,x1,sub,x2,x1
+
+x1 + x2 - 1/(x2*(-x1 + 2*x2)) 0 4.732954025268555 add,x2,sub,x1,div,div,x1,mul,x1,add,add,x2,x2,sub,sub,x2,x1,x2,x2
+
+x1 + x2 - x2/(-x1**2 + x1 + 2*x2) 0 4.613870859146118 sub,add,x2,x1,div,x2,add,sub,x2,mul,x1,x1,add,x1,x2
+
+x1 - x2**2*(1 - 3*x2)/x1 0 4.8992133140563965 sub,x1,div,x2,div,div,x1,sub,sub,sub,mul,x2,div,x2,mul,x2,x2,x2,x2,x2,x2
+
+0 0 4.737720727920532 add,x2,sub,x1,div,x2,div,x2,add,x2,x1
+
+x1 + x2 + zoo*x2 0 4.341434478759766 add,x1,add,div,x2,div,x2,div,x2,mul,sub,mul,x1,div,x2,x2,x1,x1,x2
+
+x1 + x2 1 4.46882700920105 sub,x2,sub,x2,add,x1,x2
+
+-x1*x2 + x1 + x2 0 4.716723442077637 sub,add,x2,x1,div,x1,div,x1,div,mul,mul,x1,x1,x2,x1
+
+x1 + x1/x2**4 + x2 0 4.410585641860962 add,add,x1,x2,sub,add,div,div,x1,x2,mul,mul,x2,x2,x2,x1,x1
+
+x1 + x2 - 2*x2/x1**3 0 6686.376840591431 add,sub,x1,div,div,div,add,x2,div,x1,div,add,sub,x1,mul,x1,x2,mul,x2,x1,x2,x1,x1,x1,x2
+
+x1 + x2 1 4.718728065490723 add,x2,add,x2,sub,x2,add,add,sub,mul,x2,sub,x1,x1,x1,x2,x2
+
+x1 + x2 - (x1 + x2 + x2/(x1 + x2))/x2**2 0 4.491781711578369 add,sub,x2,div,div,add,add,div,x2,add,sub,add,x1,x2,x1,x1,x1,x2,x2,x2,x1
+
+x1 - x1/x2 + x2 0 4.570004224777222 add,x1,sub,x2,div,x1,x2
+
+-x1**2/x2 + x1 + x2 0 4.696499347686768 add,x1,sub,x2,sub,x2,sub,x2,mul,div,sub,x1,sub,x2,x2,x2,x1
+
+x1 + x2 1 4.5895044803619385 add,x1,mul,x2,div,x2,x2
+
+-2*x1**3 + x1 + x2 0 4.47540807723999 sub,add,x2,add,sub,x2,mul,x1,div,x1,div,div,x2,x1,add,x2,x2,x1,x2
+
+x1 + x2 - x2/(x1 + x2 + 1) 0 4.787575006484985 sub,add,x1,x2,mul,x1,div,x2,mul,add,div,x1,x1,add,x2,x1,x1
+
+x1 + x2 + 1/x1 0 4.629631996154785 add,x2,sub,x1,sub,x1,add,div,add,x2,x2,mul,add,x2,x2,x1,x1
+
+x1 + x2 1 4.4056243896484375 sub,sub,add,x1,x2,sub,x1,add,x1,x1,x1
+
+x1 + x2 1 4.864017724990845 add,x1,sub,x2,sub,x1,sub,x2,sub,add,sub,x2,x1,x1,x1
+
+x1 + x2 1 4.566956043243408 add,x1,sub,x2,add,x2,sub,sub,x1,x1,x2
+
+x1 + x2 + 1/2 0 4.513994216918945 add,add,sub,div,x1,add,x1,x1,x1,x1,add,div,x1,div,x1,x1,x2
+

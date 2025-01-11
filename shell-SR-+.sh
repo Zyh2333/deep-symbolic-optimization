@@ -6,7 +6,7 @@ END_N=100
 START_M=1
 END_M=100
 #OPS=('+' 'x' 'd' 's')
-OPS=('+')
+OPS=('s')
 TRAIN_NUM_SAMPLES=100
 TEST_NUM_SAMPLES=100
 
@@ -18,17 +18,17 @@ for OP in ${OPS[*]}; do
   # 循环遍历 n 和 m 的值
   for ((n=$START_N; n<=$END_N; n+=STEP)); do
       for ((m=$START_M; m<=$END_M; m+=STEP)); do
-          if [ $n -le 3 ]; then
-            continue
-          fi
-          if [ $n -eq 4 ] && [ $m -le 18 ]; then
-            continue
-          fi
-          # 创建目录名称
-          data_name="dso/dso/task/regression/data/sogn/${OP}/${TRAIN_NUM_SAMPLES}/sogn_${OP}_${n}_${m}_${TRAIN_NUM_SAMPLES}.csv"
+#          if [ $n -le 3 ]; then
+#            continue
+#          fi
+#          if [ $n -eq 4 ] && [ $m -le 18 ]; then
+#            continue
+#          fi
+            # 创建目录名称
+          data_name="dso/task/regression/data/sogn/${OP}/${TRAIN_NUM_SAMPLES}/sogn_${OP}_${n}_${m}_${TRAIN_NUM_SAMPLES}.csv"
 
           # 运行第一个命令
-          /home/henry/Downloads/Python-3.6.15/python -m dso.run dso/dso/config/config_regression_sogn.json --b $data_name
+          ../venv/Scripts/python -m dso.run dso/config/config_regression_sogn.json --b $data_name
 
           # 检查上一条命令是否成功执行
           if [ $? -ne 0 ]; then

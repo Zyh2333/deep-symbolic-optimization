@@ -232,11 +232,6 @@ class RegressionTask(HierarchicalTask):
         if optimizing:
             return self.const_opt_metric(self.y_train, y_hat)
 
-        if p.pretty() == 'x₁ + x₂':
-            print('pp111', self.y_train[0], y_hat[0])
-            print('pp555', self.y_train, y_hat)
-            # print('pp222', np.abs(self.y_train[0] - y_hat[0]))
-            print('pp333', abs_function(self.y_train, y_hat))
         # Compute metric
         r = self.metric(self.y_train, y_hat)
         import dso.utils as U
